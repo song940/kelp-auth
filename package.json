@@ -1,12 +1,12 @@
 {
   "name": "kelp-auth",
-  "version": "1.0.0",
-  "description": "basic auth for kelp",
+  "version": "0.0.1",
+  "description": "Basic Auth for Kelp Project",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "lsong",
+  "author": "Lsong <song940@gmail.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/song940/kelp-auth/issues"
   },
-  "homepage": "https://github.com/song940/kelp-auth#readme"
+  "homepage": "https://github.com/song940/kelp-auth#readme",
+  "devDependencies": {
+    "kelp": "^2.0.2"
+  }
 }

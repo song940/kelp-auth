@@ -1,12 +1,11 @@
 ## kelp-auth ![npm](https://badge.fury.io/js/kelp-auth.png)
 
-basic auth for kelp
+Basic Auth middleware for kelp
 
 ### Installation
 ````
 $ npm install kelp-auth --save
 ````
-
 
 ### Example
 ````javascript
@@ -15,8 +14,15 @@ const auth = require('kelp-auth');
 
 const app = kelp();
 
-app.use(auth('user', 'pass', 'realm'));
+app.use(auth({
+  username: 'admin',
+  password: 'abc123',
+  realm: 'welcome to dashboard',
+}));
 
+app.use((req, res) => {
+    res.end("hello world");
+});
 ````
 
 ### Contributing
@@ -29,7 +35,7 @@ app.use(auth('user', 'pass', 'realm'));
 - Open a pull request, and enjoy <3
 
 ### MIT license
-Copyright (c) 2016 lsong
+Copyright (c) 2016 Lsong <song940@gmail.com>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the &quot;Software&quot;), to deal
